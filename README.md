@@ -29,6 +29,10 @@ about your solution in ['Show and Tell'][5].
 
 And that's it. No pressure, just an excuse to take some time and improve your TDD process.
 
+The 12 Days
+-----------
+- [Dec 6th (Day 1)](./day1/)
+
 [1]: https://twitter.com/TheRealBifter/status/283701772684517377
 [2]: https://www.phoneburner.com/homepage/jobs
 [3]: https://twitter.com/hashtag/12tdds
