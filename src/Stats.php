@@ -4,22 +4,22 @@ namespace TwelveTDD;
 
 class Stats
 {
-    public static function make(int ...$ints)
+    public static function make(int ...$values)
     {
 
     }
 
-    private function __construct(int ...$ints)
+    private function __construct(int ...$values)
     {
 
     }
 
-    public function getMin(): int
+    public function min(): int
     {
 
     }
 
-    public function getMax(): int
+    public function max(): int
     {
 
     }
@@ -31,6 +31,5 @@ class Stats
 
     public function average(): float
     {
-
     }
 }

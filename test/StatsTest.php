@@ -14,14 +14,44 @@ class StatsTest extends TestCase
      * @test
      * @dataProvider provideExample
      */
-    public function getters_return_expected_value(array $values, int $min, int $max, int $count, float $average)
+    public function min_returns_expected_value(array $values, array $test_case)
     {
         $sut = SUT::make(...$values);
 
-        self::assertSame($min, $sut->getMin());
-        self::assertSame($max, $sut->getMax());
-        self::assertSame($count, $sut->getCount());
-        self::assertSame($average, $sut->getAverage());
+        self::assertSame((int) $test_case['min'], $sut->min());
+    }
+
+    /**
+     * @test
+     * @dataProvider provideExample
+     */
+    public function max_returns_expected_value(array $values, array $test_case)
+    {
+        $sut = SUT::make(...$values);
+
+        self::assertSame((int) $test_case['max'], $sut->max());
+    }
+
+    /**
+     * @test
+     * @dataProvider provideExample
+     */
+    public function count_returns_expected_value(array $values, array $test_case)
+    {
+        $sut = SUT::make(...$values);
+
+        self::assertSame((int) $test_case['count'], $sut->count());
+    }
+
+    /**
+     * @test
+     * @dataProvider provideExample
+     */
+    public function average_returns_expected_value(array $values, array $test_case)
+    {
+        $sut = SUT::make(...$values);
+
+        self::assertSame((int) $test_case['min'], $sut->average());
     }
 
     public function provideExample()
@@ -34,14 +64,14 @@ class StatsTest extends TestCase
         }
 
         foreach ($input as $line => $values) {
-            $stats = $expected[$line];
-
             yield $values => [
                 array_map('intval', explode(',', $values)),
-                (int) $stats[0],
-                (int) $stats[1],
-                (int) $stats[2],
-                (float) $stats[3],
+                array_combine([
+                    'min',
+                    'max',
+                    'count',
+                    'average',
+                ], explode(',', $expected[$line]))
             ];
         }
     }
