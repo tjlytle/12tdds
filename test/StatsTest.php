@@ -51,7 +51,7 @@ class StatsTest extends TestCase
     {
         $sut = SUT::make(...$values);
 
-        self::assertSame((int) $test_case['min'], $sut->average());
+        self::assertEqualsWithDelta((float) $test_case['average'], $sut->average(), 0.00001);
     }
 
     public function provideExample()
