@@ -5,9 +5,6 @@ namespace TwelveTDD;
 use PHPUnit\Framework\TestCase;
 use TwelveTDD\Stats as SUT;
 
-// TODO: figure out why this isn't autoloaded
-require_once __DIR__ . '/../src/Stats.php';
-
 class StatsTest extends TestCase
 {
     /**
