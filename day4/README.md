@@ -1,4 +1,4 @@
-Day 3
+Day 4
 =====
 Well, math is hard and turns out you were nowhere near drawing too much current.
 Oh well, at least you're sure your code worked. Now you need to take the current
