@@ -42,6 +42,7 @@ The 12 Days
 - [Dec 6th (Day 1)](./day1/)
 - [Dec 7th (Day 2)](./day2/)
 - [Dec 8th (Day 3)](./day3/)
+- [Dec 9th (Day 4)](./day4/)
 
 [1]: https://twitter.com/TheRealBifter/status/283701772684517377
 [2]: https://www.phoneburner.com/homepage/jobs
