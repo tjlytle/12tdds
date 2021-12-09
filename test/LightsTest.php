@@ -9,7 +9,7 @@ class LightsTest extends TestCase
 {
     /**
      * @test
-     * @dataProvider provideRunnerAndExpected
+     * @dataProvider provideRunnerAndCount
      */
     public function count_returns_expected(callable $runner, int $expected): void
     {
@@ -19,7 +19,19 @@ class LightsTest extends TestCase
         self::assertSame($expected, $sut->count());
     }
 
-    public function provideRunnerAndExpected()
+    /**
+     * @test
+     * @dataProvider provideRunnerAndSequence
+     */
+    public function sequence_returns_expected(callable $runner, string $expected): void
+    {
+        $sut = new SUT();
+        $runner($sut);
+
+        self::assertSame($expected, $sut->sequence());
+    }
+
+    public function provideRunnerAndCount()
     {
         $input = file(__DIR__ . '/../day3/input.txt');
         $expected = file(__DIR__ . '/../day3/expected.txt');
@@ -32,6 +44,23 @@ class LightsTest extends TestCase
                     array_walk($commands, [$this, 'applyCommand'], $sut);
                 },
                 (int) $count
+            ];
+        }
+    }
+
+    public function provideRunnerAndSequence()
+    {
+        $input = file(__DIR__ . '/../day4/input.txt');
+        $expected = file(__DIR__ . '/../day4/expected.txt');
+
+        foreach ($expected as $line => $sequence) {
+            $commands = array_slice($input, 0, $line + 1);
+
+            yield [
+                function(SUT $sut) use ($commands) {
+                    array_walk($commands, [$this, 'applyCommand'], $sut);
+                },
+                (string) trim($sequence) // remove newline
             ];
         }
     }
