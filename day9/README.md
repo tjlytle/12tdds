@@ -1,4 +1,4 @@
-Day 8
+Day 9
 =====
 Consecutive rolls and answers handled, there's another odd behaviour. If a
 player is in the penalty box, and they don't roll to get out, they still need
@@ -9,7 +9,7 @@ Task
 ----
 Using the [example code in the language of your choice][1], add failing tests to
 assert that:
-- a roll that keeps a play in the penalty box advances play automatically
+- a roll that keeps a player in the penalty box advances play automatically
 
 And then make the tests pass.
 
