@@ -49,7 +49,8 @@ The 12 Days
 - [Dec 15th (Day 8)](./day8/)
 - [Dec 16th (Day 9)](./day9/)
 - [Dec 17th (Day 10)](./day10/)
-- [Dec 20th (Day 11)](./day11/)
+- [Dec 21st (Day 11)](./day11/)
+- [Dec 22nd (Day 11)](./day12/)
 
 [1]: https://twitter.com/TheRealBifter/status/283701772684517377
 [2]: https://www.phoneburner.com/homepage/jobs

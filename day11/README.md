@@ -1,6 +1,6 @@
 Day 11
 ======
-You've decided to get back ot work on the LED light panel. You want to provide a
+You've decided to get back to work on the LED light panel. You want to provide a
 way to validate a design without having to hook up the panel, and you've decided
 a simple ASCII representation will be sufficient. ASCII 176 will represent off
 and 219 will represent on. 
